@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: node-avi
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: 'https://github.com/GOavi101/Nodejs-app-deploy.git'
+    targetRevision: master
+    path: charts/node-avi
+
+    helm:
+      valueFiles:
+        - values.yaml
+
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
