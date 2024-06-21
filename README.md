@@ -4,6 +4,29 @@ Automated Deployment of a Node.js Application with CI/CD and GitOps
 ## Project Overview
 This project encapsulates a simple Node.js application into a Docker container and automates its deployment using GitHub Actions, Docker Hub, Helm, and Argo CD. The primary aim is to create a seamless pipeline that builds, deploys, and manages the application in a Kubernetes cluster with minimal manual intervention.
 
+## Project Structure
+
+The project is organized as follows:
+
+```plaintext
+.
+├── .github/
+│   └── workflows/
+│       └── docker-publish.yml     # GitHub Actions file for CI/CD
+├── charts/
+│   └── node-avi/         # Helm charts for the NodeJS application
+│       ├── Chart.yaml
+│       ├── templates/
+│       └── values.yaml
+├── node-hello/           # NodeJS application source code
+│   ├── index.js
+│   ├── package.json
+│   └── ...
+├── Dockerfile            # Dockerfile for building the application container
+├── README.md             # Project documentation
+└── node-avi-app.yaml     # ArgoCD YAML file for deploying the application
+```
+
 ## Docker Image on DockerHub
  we use the following Docker image:
 - `goswami49ag/node-avi:v0.0.1`
