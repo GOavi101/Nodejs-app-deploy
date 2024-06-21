@@ -96,7 +96,7 @@ This guide explains how to deploy a NodeJS application on a Kubernetes cluster u
 ### Prerequisites
 - **ArgoCD Installed:** Ensure ArgoCD is installed and running in your Kubernetes cluster.
 - **Kubernetes Access:** You must have access to the Kubernetes cluster and have `kubectl` configured to interact with it.
-- **Configuration File:** The `node-avi-app.yaml` file should be prepared as described below.
+- **Configuration File:** The `node-avi-app.yaml` file should be prepared as described.
 ### Apply the Configuration File
 Use the kubectl command to apply the node-avi-app.yaml file to your Kubernetes cluster.
 ```bash
