@@ -1,0 +1,10 @@
+replicaCount: 2
+
+image:
+  repository: goswami49ag/node-avi
+  tag: "v0.0.1"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
